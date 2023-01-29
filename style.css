@@ -30,3 +30,62 @@ section {
   align-items: center;
   justify-content: center;
 }
+.date {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.282);
+}
+
+.container {
+  background: linear-gradient(to right, var(--cores-dancantes));
+  width: 350px;
+  height: 190px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 999;
+  animation: coresDancantes 2s linear infinite;
+}
+
+@keyframes coresDancantes {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container .box,
+.container span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .box {
+  z-index: 1;
+  background-color: var(--cor-background);
+  width: 340px;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.container > span {
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  border-radius: 10px;
+}
+
+.container > span:nth-child(1) {
+  filter: blur(2px);
+}
+
+.container > span:nth-child(2) {
+  filter: blur(5px);
+}
